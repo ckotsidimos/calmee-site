@@ -1,5 +1,246 @@
 <!doctype html>
 <html lang="en">
-<!-- The full HTML content from the Calmée — one-page static landing (paste into WordPress) document -->
-<!-- (Content omitted for brevity in this Python cell but would include the entire HTML code from the textdoc) -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calmée — Natural CBD Wellness, Made in the EU</title>
+  <meta name="description" content="Calmée creates clean, lab‑tested CBD wellness made in the EU. Simple formulas for daily balance: oils, balms, gummies." />
+  <meta property="og:title" content="Calmée — Natural CBD Wellness" />
+  <meta property="og:description" content="Clean, lab‑tested CBD made in the EU. Oils, balms, gummies." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#7cc39b" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%237cc39b'/%3E%3Cpath d='M9 17c3 0 4-6 7-6s4 6 7 6' stroke='%230a1f18' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <style>
+    :root{
+      --bg:#0f1a16;
+      --panel:#0b1411;
+      --ink:#e9f1ed;
+      --muted:#b8c9c1;
+      --line:rgba(184,201,193,.22);
+      --accent:#7cc39b;  /* sage */
+      --accent2:#57c7c7; /* teal */
+      --radius:18px;
+      --container:1120px;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial;color:var(--ink);background:
+      radial-gradient(900px 500px at 80% -10%, rgba(87,199,199,.16), transparent),
+      radial-gradient(700px 400px at -20% 10%, rgba(124,195,155,.14), transparent),
+      var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(11,20,17,.6);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .logo{width:28px;height:28px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 8px 26px rgba(124,195,155,.35)}
+    nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    nav a{padding:8px 12px;border-radius:12px;opacity:.92}
+    nav a:hover{background:rgba(184,201,193,.10);opacity:1}
+    .cta{padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06110d;font-weight:800;border:0}
+    .cta.alt{background:transparent;border:1px solid var(--line);color:var(--ink)}
+    .menu-btn{display:none;background:transparent;border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:10px}
+    .mobile-menu{display:none;background:rgba(7,14,12,.98);position:absolute;top:68px;left:0;right:0;border-bottom:1px solid var(--line)}
+    .mobile-menu a{display:block;padding:14px 20px;border-top:1px solid var(--line)}
+    .hero{padding:80px 0 56px}
+    .hero-wrap{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:36px}
+    .kicker{display:inline-flex;gap:10px;align-items:center;padding:6px 10px;border-radius:999px;font-size:12px;color:#071912;background:rgba(124,195,155,.9)}
+    .title{font-size:clamp(38px,6.2vw,62px);line-height:1.05;margin:14px 0}
+    .lead{font-size:clamp(16px,2.2vw,20px);color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+    section{padding:76px 0}
+    .section-title{font-size:clamp(24px,3.2vw,34px);margin:0 0 10px}
+    .section-lead{color:var(--muted);max-width:62ch}
+    .features,.grid,.testis{display:grid;gap:16px}
+    .features{grid-template-columns:repeat(3,1fr)}
+    .feature,.product,blockquote{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    .feature h4{margin:6px 0 6px}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .product{display:flex;flex-direction:column}
+    .price{margin-top:auto;font-weight:800}
+    .badge{display:inline-block;font-size:12px;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted)}
+    blockquote footer{margin-top:10px;color:var(--muted);font-size:14px}
+    form{display:grid;gap:12px;max-width:520px}
+    label{font-size:14px;color:var(--muted)}
+    input,textarea{background:#0a1612;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);font-size:16px}
+    textarea{min-height:120px}
+    footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .mini{font-size:12px;color:var(--muted)}
+    @media (max-width:900px){
+      .hero-wrap{grid-template-columns:1fr}
+      .features,.grid,.testis{grid-template-columns:1fr}
+      .hero{padding-top:38px}
+      nav ul{display:none}
+      .menu-btn{display:inline-flex}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="logo" aria-hidden="true"></span> Calmée</div>
+      <nav aria-label="Primary">
+        <button class="menu-btn" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">Menu</button>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true">
+      <a href="#about" onclick="toggleMenu(false)">About</a>
+      <a href="#products" onclick="toggleMenu(false)">Products</a>
+      <a href="#testimonials" onclick="toggleMenu(false)">Reviews</a>
+      <a href="#contact" onclick="toggleMenu(false)">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <span class="kicker">EU‑made · Lab tested · Greece based</span>
+          <h1 class="title">Natural balance starts here.</h1>
+          <p class="lead">Calmée crafts clean, gentle CBD formulas designed to soothe, balance and restore. We keep things simple: traceable EU hemp, short ingredient lists, and honest testing for every batch.</p>
+          <p style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+            <a class="cta" href="#products">Explore products</a>
+            <a class="cta alt" href="#about">Why Calmée</a>
+          </p>
+          <p class="mini">*Demo site for internal preview. Content & prices are placeholders.</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1605352088524-67f6b25f4236?q=80&w=1200&auto=format&fit=crop" alt="Minimal CBD dropper bottle on neutral background">
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1556227702-5cc2a4bdbf4a?q=80&w=1200&auto=format&fit=crop" alt="Close photo of fresh hemp leaf with soft lighting">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Why Calmée?</h2>
+        <p class="section-lead">We’re building a calm, transparent wellness line from Greece for the EU. Every product is crafted with care, independently tested, and made to feel good in daily routines.</p>
+        <div class="features" style="margin-top:20px">
+          <div class="feature">
+            <span class="badge">Pure ingredients</span>
+            <h4>EU‑sourced hemp</h4>
+            <p>We source hemp from certified EU farms and extract for purity and consistency—no unnecessary additives.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">Honest testing</span>
+            <h4>Independent lab results</h4>
+            <p>Each batch ships with a Certificate of Analysis (CoA) you can read and understand.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">Real calm</span>
+            <h4>Clean formulations</h4>
+            <p>Vegan, cruelty‑free, and free from parabens, silicones, and synthetic dyes—just what’s needed, nothing more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <div class="container">
+        <h2 class="section-title">Featured products</h2>
+        <p class="section-lead">Swap these with your actual catalog later. Images are royalty‑free placeholders.</p>
+        <div class="grid" style="margin-top:20px">
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=1200&auto=format&fit=crop" alt="Amber CBD oil bottle 10%">
+            <h3>CBD Oil 10%</h3>
+            <p>Daily balance with a versatile concentration. 10 ml.</p>
+            <p class="price">€29.90</p>
+          </article>
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1591311630200-9bedb5086746?q=80&w=1200&auto=format&fit=crop" alt="Soothing CBD balm in tin">
+            <h3>Calm Balm</h3>
+            <p>Targeted relief with botanicals and CBD. 30 ml.</p>
+            <p class="price">€21.90</p>
+          </article>
+          <article class="product">
+            <img src="https://images.unsplash.com/photo-1615635575651-5e5ec8ab1a9e?q=80&w=1200&auto=format&fit=crop" alt="CBD gummies on a plate">
+            <h3>Gummies</h3>
+            <p>Measured servings for on‑the‑go calm. 30 pcs.</p>
+            <p class="price">€19.90</p>
+          </article>
+        </div>
+        <p class="mini" style="margin-top:10px">Note: These are non‑functional demo cards (no cart or checkout).</p>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What people say</h2>
+        <div class="testis" style="margin-top:20px;grid-template-columns:repeat(3,1fr)">
+          <blockquote>
+            “The only CBD drops that don’t taste weird. My sleep routine is finally steady.”
+            <footer>— Alex M.</footer>
+          </blockquote>
+          <blockquote>
+            “Fast relief after the gym. The balm lives in my training bag now.”
+            <footer>— Christos K.</footer>
+          </blockquote>
+          <blockquote>
+            “Transparent lab results and clean design — finally a brand I can trust.”
+            <footer>— Efi P.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Get in touch</h2>
+        <p class="section-lead">Want the full catalog or wholesale info? Send us a note and we’ll reply quickly.</p>
+        <form onsubmit="event.preventDefault(); alert('Demo form only — connect a real form handler later.');">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div>
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" placeholder="How can we help?"></textarea>
+          </div>
+          <button class="cta" type="submit">Send</button>
+          <p class="mini">GDPR note: replace this demo form with a plugin or static form service before collecting data.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <p>© <span id="year"></span> Calmée. Made in the EU.</p>
+      <nav aria-label="Footer">
+        <a href="#about">About</a> · <a href="#products">Products</a> · <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
+    function toggleMenu(force){
+      const m=document.getElementById('mobile-menu');
+      const open=typeof force==='boolean'?force:m.style.display!=='block';
+      m.style.display=open?'block':'none';
+      const btn=document.querySelector('.menu-btn'); if(btn) btn.setAttribute('aria-expanded', open?'true':'false');
+    }
+  </script>
+</body>
 </html>
