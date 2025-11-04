@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="160" viewBox="0 0 512 160">
+  <rect width="512" height="160" fill="#f5f0ea"/>
+  <g transform="translate(24,24)">
+    <circle cx="52" cy="56" r="40" fill="#7cc39b"/>
+    <path d="M36 58c10 0 13-20 22-20s12 20 22 20" fill="none" stroke="#0a1f18" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="120" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#214832">Calmée</text>
+</svg>
