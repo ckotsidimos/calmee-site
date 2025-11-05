@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calmée — CBD Oils</title>
+  <meta name="description" content="Explore Calmée CBD oil strengths: 5%, 10%, 15%, 20%, 30%. EU-made, lab-tested, 10ml bottles." />
+  <link rel="icon" href="assets/logo-calmee.png" />
+  <link rel="stylesheet" href="calmee-theme.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="index.html" aria-label="Home"><img src="assets/logo-calmee.png" alt="Calmée logo" style="height:32px;border-radius:8px" /></a>
+      </div>
+      <nav aria-label="Primary">
+        <button class="menu-btn" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">Menu</button>
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="cbd-oils.html" aria-current="page">CBD oils</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">CBD oils</h1>
+        <p class="section-lead">Five strengths to cover typical needs. 10 ml bottles are a common EU format and map neatly to mg/% values (e.g., 1000 mg ≈ 10% in 10 ml). Strength ranges like 5–10%, 15–20%, and 30%+ are widely used across EU markets. <span class="mini">See sources on the homepage request.</span></p>
+
+        <div class="grid" style="margin-top:22px">
+          <article class="product">
+            <img src="assets/product-oil.png" alt="CBD Oil 5% bottle">
+            <h3>CBD Oil 5% (500 mg / 10 ml)</h3>
+            <p>Gentle daily support. ~2.5 mg per drop (estimate). Carrier: MCT oil. Natural flavor.</p>
+            <p class="mini">Typical entry strength (5–10%).</p>
+            <p class="price">€19.90</p>
+          </article>
+
+          <article class="product">
+            <img src="assets/product-oil.png" alt="CBD Oil 10% bottle">
+            <h3>CBD Oil 10% (1000 mg / 10 ml)</h3>
+            <p>Versatile, balanced choice for regular routines. Approx. 5 mg per drop.</p>
+            <p class="mini">Common European SKU and price band.</p>
+            <p class="price">€29.90</p>
+          </article>
+
+          <article class="product">
+            <img src="assets/product-oil.png" alt="CBD Oil 15% bottle">
+            <h3>CBD Oil 15% (1500 mg / 10 ml)</h3>
+            <p>Mid‑high option for experienced users. Approx. 7.5 mg per drop.</p>
+            <p class="mini">Fits the 15–20% strength range seen widely.</p>
+            <p class="price">€39.90</p>
+          </article>
+
+          <article class="product">
+            <img src="assets/product-oil.png" alt="CBD Oil 20% bottle">
+            <h3>CBD Oil 20% (2000 mg / 10 ml)</h3>
+            <p>High strength for compact dosing. Approx. 10 mg per drop.</p>
+            <p class="mini">Popular “strong” tier in EU shops.</p>
+            <p class="price">€49.90</p>
+          </article>
+
+          <article class="product">
+            <img src="assets/product-oil.png" alt="CBD Oil 30% bottle">
+            <h3>CBD Oil 30% (3000 mg / 10 ml)</h3>
+            <p>Extra‑strong. For advanced users seeking fewer drops per serving.</p>
+            <p class="mini">Seen as an upper tier (30%+).</p>
+            <p class="price">€69.90</p>
+          </article>
+        </div>
+
+        <div class="u-border" style="margin-top:24px">
+          <p class="mini"><strong>Notes & compliance:</strong> Keep total THC within legal national limits (many EU countries align around ≤0.3% for hemp cultivation; retail rules vary). Provide a batch‑specific Certificate of Analysis (CoA) for cannabinoid profile and contaminants.</p>
+        </div>
+        <p class="mini" style="margin-top:8px">For wholesale or lab reports, contact us via the form on the <a href="index.html#contact">main page</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <p>© <span id="year"></span> Calmée.</p>
+      <nav aria-label="Footer">
+        <a href="index.html#about">About</a> · <a href="cbd-oils.html">CBD oils</a> · <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl=document.getElementById('year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
+    function toggleMenu(force){ const m=document.getElementById('mobile-menu'); const open=typeof force==='boolean'?force:m && m.style.display!=='block'; if(m){ m.style.display=open?'block':'none'; } const btn=document.querySelector('.menu-btn'); if(btn) btn.setAttribute('aria-expanded', open?'true':'false'); }
+  </script>
+</body>
+</html>
